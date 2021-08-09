@@ -19,4 +19,4 @@ It will create a tunnel from your localhost to https://tt-example-adapter.eu.ngr
 
 Or use something like concurrently https://www.npmjs.com/package/concurrently to run it at once
 
-The base url will be set to `https://tt-example-adapter.eu.ngrok.io`
+The base url will be set to `https://tt-example-adapter.eu.ngrok.io/development`
