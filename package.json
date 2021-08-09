@@ -1,0 +1,28 @@
+{
+  "name": "teamtailor-webhook-example-adapter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch --runInBand --detectOpenHandles",
+    "start": "sls offline --stage development start --httpPort 5555",
+    "ngrok": "ngrok http -region eu -subdomain=tt-example-adapter 5555"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-offline": "^8.0.0"
+  }
+}

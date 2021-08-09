@@ -1,0 +1,20 @@
+service: tt-teamtailor-webhook-example-adapter
+useDotenv: true
+provider:
+  apiGateway:
+    shouldStartNameWithService: true
+  name: aws
+  runtime: nodejs12.x
+  stage: development
+  region: eu-west-1
+  environment:
+    NODE_ENV: ${opt:stage, self:provider.stage}
+functions:
+  app:
+    handler: index.handler
+    timeout: 20
+    events:
+      - http: ANY /
+      - http: 'ANY /{proxy+}'
+plugins:
+  - serverless-offline
