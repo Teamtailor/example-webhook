@@ -16,13 +16,13 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch --runInBand --detectOpenHandles",
-    "start": "NODE_OPTIONS=--no-experimental-require-module sls offline --stage development start --httpPort 5555",
+    "start": "LOCAL_NODE_RUNTIME=nodejs20.x NODE_OPTIONS=--no-experimental-require-module sls offline --stage development start --httpPort 5555",
     "ngrok": "ngrok http -region eu -subdomain=tt-example-adapter 5555"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "serverless-offline": "11.3.0"
+    "serverless-offline": "13.8.2"
   }
 }

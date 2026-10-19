@@ -6,10 +6,13 @@ Example is using node and serverless framework, but you are free to use any lang
 ## Installation
 
 Use Node.js 22 and Yarn Classic (1.x) for local development.
-`serverless-offline` 11.3 requires Serverless Framework 3.x (provided separately
+`serverless-offline` 13.8.2 requires Serverless Framework 3.x (provided separately
 on your PATH, as the `sls` command). The start script disables Node 22's
 experimental `require(ESM)` support so Framework 3 can load the plugin with
-its dynamic import fallback.
+its dynamic import fallback. The start script sets `LOCAL_NODE_RUNTIME=nodejs20.x`
+for the emulator, which supports the Node 20 runtime label and executes on
+the local Node 22 process. It no longer supports Node 12. The configuration defaults
+to the original deployed runtime when this variable is absent.
 
 `yarn`
 

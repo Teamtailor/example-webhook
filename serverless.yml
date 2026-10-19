@@ -4,7 +4,7 @@ provider:
   apiGateway:
     shouldStartNameWithService: true
   name: aws
-  runtime: nodejs12.x
+  runtime: ${env:LOCAL_NODE_RUNTIME, 'nodejs12.x'}
   stage: development
   region: eu-west-1
   environment:
